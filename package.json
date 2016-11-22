@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "feature-filter": "^2.2.0",
+    "geojson-stream-merge": "^3.0.0",
     "minimist": "^1.2.0",
     "osmium": "^0.5.3"
   }

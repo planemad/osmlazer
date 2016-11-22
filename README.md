@@ -1,5 +1,5 @@
 # osmlazer
-osmium based OpenStreetMap data filter. Input is an OSM PBF, output is a stream of GeoJSON FeatureCollection per line.
+osmium based OpenStreetMap data filter. Input is an OSM PBF, output is a stream of line delimited GeoJSON FeatureCollection.
 
 ## Setup
 
@@ -23,7 +23,19 @@ brew install autoconf automake libtool makedepend
 
 ## Usage
 
-`node index.js --file /path/to/pbf --filter /path/to/filter` 
+Download a OSM pbf file from [Geofabrik](http://download.geofabrik.de) or [Mapzen](https://mapzen.com/data/metro-extracts/)
+
+`node index.js --file /path/to/pbf --filter /path/to/filter`
+
+**Write to a single GeoJSON FeatureCollection**
+Use [geojson-stream-merge](https://github.com/geohacker/geojson-stream-merge) to convert the line delimited GeoJSON FeatureCollection to a single object.
+
+```
+node index.js --file /path/to/pbf --filter /path/to/filter > features.output
+geojson-stream-merge --input features.output --output output.json
+```
+
+
 
 ## Filters
 
