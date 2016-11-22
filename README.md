@@ -28,6 +28,7 @@ Download a OSM pbf file from [Geofabrik](http://download.geofabrik.de) or [Mapze
 `node index.js --file /path/to/pbf --filter /path/to/filter`
 
 **Write to a single GeoJSON FeatureCollection**
+
 Use [geojson-stream-merge](https://github.com/geohacker/geojson-stream-merge) to convert the line delimited GeoJSON FeatureCollection to a single object.
 
 ```
